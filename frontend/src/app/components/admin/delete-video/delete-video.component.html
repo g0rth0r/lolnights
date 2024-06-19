@@ -1,0 +1,25 @@
+<div class="delete-video">
+  <h3>Delete Video</h3>
+  <div class="search-bar">
+      <input type="text" placeholder="Search videos..." [(ngModel)]="searchText" (ngModelChange)="onSearchTextChange($event)">
+  </div>
+  <div class="videos-container">
+      <div *ngIf="loading" class="spinner-overlay">
+          <div class="spinner"></div>
+      </div>
+      <div *ngIf="!loading">
+          <div *ngIf="videos.length === 0">No videos found.</div>
+          <ul>
+              <li *ngFor="let video of videos">
+                  <span>{{ video.title }} ({{ video.timestamp * 1000 | date:'medium' }})</span>
+                  <button (click)="deleteVideo(video.id)">Delete</button>
+              </li>
+          </ul>
+          <div class="pagination">
+              <button (click)="prevPage()" [disabled]="page <= 1">Previous</button>
+              <span>Page {{ page }}</span>
+              <button (click)="nextPage()" [disabled]="!hasMoreVideos">Next</button>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+/* video-details.component.css */
+.video-detail {
+  padding: 16px;
+}
+
+.breadcrumb {
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb span {
+  color: #6c757d;
+}
+
+.video-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.video {
+  flex: 2;
+  width: 100%;
+  height: 600px; /* Adjust the height as needed */
+}
+
+.attributes {
+  flex: 1;
+  align-self: flex-start;
+}
+
+.attributes h3 {
+  margin-bottom: 8px;
+}
+
+.attribute-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.attributes button {
+  margin-right: 8px; /* Add spacing between buttons */
+}
+
+.attributes-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.attributes-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  border: none; /* Remove the border */
+  gap: 8px;
+}
+
+.accordion {
+  margin-top: 16px;
+}
+
+.accordion-item {
+  margin-bottom: 8px;
+}
+
+.accordion-item h3 {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  padding: 8px;
+  margin: 0;
+  border: 1px solid #ddd;
+}
+
+.accordion-item div {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.user-attributes:nth-child(even) {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Add space between sections */
+}
+
+.user-attributes:nth-child(odd) {
+  background-color: #e9e9e9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Add space between sections */
+}

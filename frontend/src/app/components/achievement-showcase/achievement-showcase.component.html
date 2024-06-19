@@ -1,0 +1,38 @@
+<!-- src/app/components/achievement-showcase/achievement-showcase.component.html -->
+<div class="achievement-showcase">
+    <h2>Achievement Showcase</h2>
+  
+    <h3>Video Achievements</h3>
+    <div class="video-achievements">
+      <div class="achievements-row">
+        <div class="achievement" *ngFor="let achievement of videoAchievements" [title]="achievement.label">
+          <div class="achievement-icon-container">
+            <img 
+              [src]="achievement.count > 0 ? achievement.achievedIcon : achievement.icon" 
+              [ngClass]="{'achieved': achievement.count > 0, 'not-achieved': achievement.count === 0}"
+              class="achievement-icon"
+            />
+            <span *ngIf="achievement.count > 1" class="multiplier">{{ achievement.count }}x</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <h3>Attribute Achievements</h3>
+    <div class="user-achievements">
+      <div class="achievements-row">
+        <div *ngFor="let user of userAchievements" class="user-attributes">
+          <h4>{{ user.username }}'s Achievements</h4>
+          <div class="attributes-section">
+            <div class="attributes-row" *ngFor="let attribute of user.attributes">
+              <div [ngClass]="{'achieved': attribute.count > 0, 'not-achieved': attribute.count === 0}">
+                <span>{{ attribute.label }}</span>
+                <span *ngIf="attribute.count > 0">{{ attribute.count }}x</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

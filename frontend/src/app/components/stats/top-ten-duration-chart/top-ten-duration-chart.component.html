@@ -1,0 +1,12 @@
+<div class="chart-container">
+    <h3 class="chart-title">Top 10 Longest Videos</h3>
+    <ngx-charts-number-card
+      [results]="topTenVideos"
+      (select)="onSelect($event)"
+      [view]="view"
+      [cardColor]="'#232837'"
+      [bandColor]="'#232837'"
+      [textColor]="'#fff'">
+    </ngx-charts-number-card>
+  </div>
+  

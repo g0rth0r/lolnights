@@ -1,0 +1,54 @@
+.stats-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.achievement-showcase-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.graphs-container {
+  width: 100%;
+  max-width: 100%; /* Set to 80% of the screen width */
+  display: flex;
+  flex-wrap: wrap; /* Allow graphs to wrap to the next line */
+  justify-content: center; /* Center the graphs horizontally */
+}
+
+.graph-row {
+  display: flex;
+  justify-content: center; /* Center the graphs within each row */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow graphs to wrap within each row */
+}
+
+.graph {
+  flex: 1 1 740px; /* Ensure graphs are 740px wide and can grow/shrink */
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1500px) {
+  .graph-row {
+    flex-direction: column; /* Stack graphs vertically on small screens */
+    align-items: center;
+  }
+
+  .graph {
+    flex: 1 1 100%; /* Make graphs take full width on small screens */
+  }
+}
+
+.new-row {
+  flex-basis: 100%;
+  height: 0;
+}

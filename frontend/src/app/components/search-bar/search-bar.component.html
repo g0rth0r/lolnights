@@ -1,0 +1,18 @@
+<div class="search-bar">
+  <input type="text" placeholder="Search by title..." [(ngModel)]="searchText" (input)="onSearchTextChange(searchText)" />
+  <input
+    type="text"
+    ngxDaterangepickerMd
+    [(ngModel)]="selected"
+    [showCustomRangeLabel]="true"
+    [alwaysShowCalendars]="true"
+    [ranges]="ranges"
+    [linkedCalendars]="true"
+    [isInvalidDate]="isInvalidDate"
+    [showClearButton]="true"
+    (datesUpdated)="onDateRangeChange()"
+    [locale]="{ applyLabel: 'OK', format: 'YYYY-MM-DD' }"
+    placeholder="Select please..."
+    class="form-control"
+  />
+</div>

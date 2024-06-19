@@ -1,0 +1,61 @@
+.add-video {
+  margin: 20px;
+}
+
+.add-video h3 {
+  margin-bottom: 10px;
+}
+
+.add-video form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-video form div {
+  margin-bottom: 10px;
+}
+
+.add-video form label {
+  margin-bottom: 5px;
+}
+
+.add-video form input[type="url"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.add-video form .error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+.add-video form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add-video form button[disabled] {
+  background-color: #ccc;
+}
+
+.add-video .logs {
+  margin-top: 20px;
+}
+
+.add-video .logs h4 {
+  margin-bottom: 10px;
+}
+
+.add-video .logs textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+}

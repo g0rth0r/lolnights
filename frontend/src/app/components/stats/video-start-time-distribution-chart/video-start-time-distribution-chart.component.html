@@ -1,0 +1,18 @@
+<div class="chart-container">
+    <h3 class="chart-title">Lolnight Start Time Distribution (UTC)</h3>
+    <ngx-charts-bar-vertical
+      *ngIf="!loading"
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="videoStartTimeDistribution"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Time Bin (10min)'"
+      [yAxisLabel]="'Count'"
+      [animations]="true">
+    </ngx-charts-bar-vertical>
+  </div>
+  

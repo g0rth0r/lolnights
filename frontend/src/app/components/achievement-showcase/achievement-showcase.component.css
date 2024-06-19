@@ -1,0 +1,97 @@
+/* src/app/components/achievement-showcase/achievement-showcase.component.css */
+.achievement-showcase {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto; /* Center the component horizontally */
+  }
+  
+  .video-achievements, .user-achievements {
+    margin-bottom: 20px;
+    border: 2px solid #ccc; /* Change border color to a shade of gray */
+    border-radius: 8px; /* Round the edges of the boxes */
+    padding: 10px;
+  }
+  
+  h3, h4 {
+    margin-bottom: 10px;
+  }
+  
+  .achievements-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 64px;
+  }
+  
+  .achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .achievement-icon-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .achievement-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .achievement.achieved {
+    color: red;
+  }
+  
+  .achievement.not-achieved {
+    color: lightgray;
+  }
+  
+  .multiplier {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: red;
+  }
+  
+  .user-attributes {
+    margin-bottom: 10px;
+    display: flex; /* Align in row */
+    align-items: center;
+    gap: 10px; /* Add space between users */
+  }
+  
+  .attributes-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .attributes-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-attributes:nth-child(even) {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .user-attributes:nth-child(odd) {
+    background-color: #e9e9e9;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  

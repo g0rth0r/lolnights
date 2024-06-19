@@ -1,0 +1,10 @@
+ngx-charts-number-card .card {
+    font-size: 14px; /* Adjust the font size */
+    white-space: pre-wrap; /* Enable text wrapping */
+    text-align: center; /* Center align the text */
+  }
+  
+  ngx-charts-number-card .card .label {
+    font-size: 8px; /* Adjust the label font size */
+    white-space: pre-wrap; /* Enable text wrapping */
+  }

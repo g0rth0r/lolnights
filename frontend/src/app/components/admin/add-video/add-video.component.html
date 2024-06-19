@@ -1,0 +1,16 @@
+<div class="add-video">
+  <h3>Add New Video</h3>
+  <form (ngSubmit)="onSubmit()" #videoForm="ngForm">
+    <div>
+      <label for="url">YouTube URL:</label>
+      <input type="url" id="url" name="url" [(ngModel)]="videoUrl" required>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </div>
+    <button type="submit" [disabled]="videoForm.invalid || loading">Add Video</button>
+  </form>
+  <div *ngIf="loading">Adding video, please wait...</div>
+  <div class="logs" *ngIf="logs">
+    <h4>System Logs</h4>
+    <textarea readonly>{{ logs }}</textarea>
+  </div>
+</div>

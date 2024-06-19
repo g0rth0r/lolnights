@@ -1,0 +1,19 @@
+<!-- src/app/components/stats/video-frequencies-graph/video-frequencies-graph.component.html -->
+<div class="chart-container">
+    <h3 class="chart-title">Lolnight frequency by month</h3>
+    <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="videoFrequencies"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [roundDomains]="true">
+    </ngx-charts-bar-vertical>
+  </div>
+  

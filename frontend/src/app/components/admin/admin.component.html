@@ -1,0 +1,16 @@
+<div class="admin-page">
+  <div class="admin-container">
+    <nav class="admin-sidebar">
+      <h2>Admin Page</h2>
+      <ul>
+        <li><a routerLink="add-video" routerLinkActive="active">Add New Video</a></li>
+        <li><a routerLink="delete-video" routerLinkActive="active">Delete Video</a></li>
+        <li><a routerLink="stats" routerLinkActive="active">Statistics</a></li> <!-- New link -->
+        <!-- Add more links here for other subsections -->
+      </ul>
+    </nav>
+    <div class="admin-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.search-bar {
+  display: flex;
+  margin-bottom: 16px;
+  margin: 8px;
+}
+
+.search-bar input[type="text"] {
+  flex: 3;
+  padding: 8px;
+}
+
+.search-bar input[ngxDaterangepickerMd] {
+  flex: 1;
+  padding: 8px;
+  max-width: 600px; /* Optional: Set a maximum width */
+  margin-left: 32px;
+}

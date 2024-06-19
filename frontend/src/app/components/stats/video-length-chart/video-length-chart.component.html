@@ -1,0 +1,21 @@
+<div class="chart-container">
+    <h3 class="chart-title">Average Lolnight duration</h3>
+    <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="videoLengthData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Date'"
+      [yAxisLabel]="'Length (minutes)'"
+      [autoScale]="true"
+      [customColors]="[
+        { name: 'Total Length per Day', value: '#5AA454' },
+        { name: 'Rolling Average Length per Day', value: '#C7B42C' }
+      ]">
+    </ngx-charts-line-chart>
+  </div>
+  

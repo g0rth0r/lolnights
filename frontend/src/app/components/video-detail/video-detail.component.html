@@ -1,0 +1,42 @@
+﻿<div *ngIf="video" class="video-detail">
+  <nav class="breadcrumb">
+    <a routerLink="/">Home</a> / <span>{{ video.title }}</span>
+  </nav>
+  <h2>{{ video.title }}</h2>
+  <p><strong>Date:</strong> {{ formatDate(video.timestamp) }}</p>
+  <div class="video-container">
+    <iframe class="video" [src]="safeUrl" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p>{{ video.description }}</p>
+  <div class="accordion">
+    <div class="accordion-item">
+      <h3 (click)="toggleSection('attributes')">Attributes</h3>
+      <div *ngIf="sections.attributes" class="attributes-section">
+        <div *ngFor="let userAttribute of userAttributes" class="user-attributes">
+          <h4>{{ userAttribute.username }}</h4>
+          <div class="attributes-row">
+            <button *ngFor="let attribute of userAttribute.attributes" 
+                    (click)="toggleAttribute(attribute, userAttribute.username)" 
+                    [disabled]="userAttribute.username !== authService.getUsername()">
+              <img [src]="getAttributeIcon(attribute, userAttribute.username)" 
+                   [alt]="attribute.name + ' Icon'" 
+                   class="attribute-icon"/>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h3 (click)="toggleSection('summary')">Summary</h3>
+      <div *ngIf="sections.summary">
+        <p>Placeholder for Summary content.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h3 (click)="toggleSection('transcript')">Transcript</h3>
+      <div *ngIf="sections.transcript">
+        <p>Placeholder for Transcript content.</p>
+      </div>
+    </div>
+  </div>
+</div>

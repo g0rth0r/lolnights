@@ -1,0 +1,11 @@
+<div class="admin-stats">
+    <h3>Statistics</h3>
+    <button (click)="refreshStats()">Refresh Stats DB</button>
+    <div *ngIf="refreshMessage" class="refresh-message">{{ refreshMessage }}</div>
+    <div class="logs">
+      <h4>System Logs</h4>
+      <textarea readonly>{{ logs }}</textarea>
+    </div>
+    <div *ngIf="loading" class="spinner"></div>
+  </div>
+  

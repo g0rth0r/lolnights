@@ -1,0 +1,13 @@
+﻿<app-search-bar 
+  (searchTextChange)="onSearchTextChange($event)"
+  (dateRangeChange)="onDateRangeChange($event)">
+</app-search-bar>
+<div class="video-mosaic">
+  <div *ngFor="let video of filteredVideos" class="video-tile">
+    <a [routerLink]="['/video', video.id]">
+      <img [src]="video.thumbnail" alt="{{ video.title }}">
+      <h3>{{ video.title }}</h3>
+    </a>
+  </div>
+</div>
+<div *ngIf="loading" class="spinner"></div>
