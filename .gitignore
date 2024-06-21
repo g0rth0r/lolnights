@@ -23,3 +23,4 @@ frontend/.angular
 frontend/node_modules
 backend/auth/__pycache__
 frontend/src/environments/environment.prod.ts
+/frontend/dist
