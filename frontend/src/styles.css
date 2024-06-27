@@ -1,9 +1,11 @@
 /* src/styles.css or any global CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap');
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: 'Rajdhani', Arial, sans-serif; /* Modern, serious, cyberpunk font */
   background-color: #121212; /* Darker background color for dark mode */
   color: #e0e0e0;
 }

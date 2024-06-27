@@ -11,6 +11,22 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 3em;
+    font-family: 'Pacifico', cursive; /* Use a fancy font */
+    color: #ffcc00; /* Bright yellow color */
+    text-shadow: 2px 2px 4px #000000; /* Add a shadow for depth */
+    animation: glow 1s ease-in-out infinite alternate; /* Add a glowing animation */
+    text-transform: uppercase; /* Make all letters uppercase */
+    letter-spacing: 0.1em; /* Add kerning (spacing between letters) */
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00, 0 0 60px #ffcc00, 0 0 70px #ffcc00;
+    }
+    to {
+        text-shadow: 0 0 20px #ff9900, 0 0 30px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 60px #ff9900, 0 0 70px #ff9900, 0 0 80px #ff9900;
+    }
 }
 
 nav {
