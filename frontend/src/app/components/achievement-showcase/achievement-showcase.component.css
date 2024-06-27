@@ -1,11 +1,12 @@
 /* src/app/components/achievement-showcase/achievement-showcase.component.css */
 .achievement-showcase {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #333333;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 80%;
     margin: 0 auto; /* Center the component horizontally */
+    color: #fff;
   }
   
   .video-achievements, .user-achievements {
@@ -41,7 +42,7 @@
   .achievement-icon {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
   }
   
   .achievement.achieved {
