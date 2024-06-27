@@ -26,7 +26,7 @@ export class VideoMosaicComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.checkContentHeight();
+    this.checkContentHeight(true);
   }
 
   onScroll(): void {
@@ -73,10 +73,17 @@ export class VideoMosaicComponent implements OnInit, AfterViewInit {
     }, 200);
   }
 
-  checkContentHeight(): void {
-    if (document.body.offsetHeight < window.innerHeight && this.hasMoreVideos) {
-      this.page++;
-      this.loadVideos();
+  checkContentHeight(initialLoad: boolean = false): void {
+    if (document.body.scrollHeight <= window.innerHeight && this.hasMoreVideos) {
+      if (initialLoad) {
+        this.page++;
+        this.loadVideos();
+      } else {
+        setTimeout(() => {
+          this.page++;
+          this.loadVideos();
+        }, 200);
+      }
     }
   }
 
